@@ -1,12 +1,9 @@
-{                                                                                                                                                                                                    
-    "id": "2026-01-cities-update",                                                                                                                                                                     
-    "title_en": "Cities List Updated",                                                                                                                                                                 
-    "title_ar": "تم تحديث قائمة المدن",                                                                                                                                                                
-    "message_en": "We've updated the cities list. Please clear your cache and reselect your city for accurate prayer times.",                                                                          
-    "message_ar": "تم تحديث قائمة المدن. يرجى مسح الذاكرة المؤقتة وإعادة اختيار مدينتك للحصول على أوقات صلاة دقيقة.",                                                                                  
-    "type": "action",                                                                                                                                                                                  
-    "is_active": true,                                                                                                                                                                                 
-    "action_text_en": "Clear Cache",                                                                                                                                                                   
-    "action_text_ar": "مسح الذاكرة المؤقتة",                                                                                                                                                           
-    "action_type": "clear_cache"                                                                                                                                                                       
-  } 
+{
+  "id": "2026-02-ramadan",
+  "title_en": "Thank you for updating!",
+  "title_ar": "شكراً لتحديثكم!",
+  "message_en": "Thank you for updating to the latest version. Prayer cities have been adjusted based on the new data from the government site.",
+  "message_ar": "شكراً لتحديثكم إلى أحدث إصدار. تم تعديل مدن الصلاة بناءً على البيانات الجديدة من موقع الحكومة.",
+  "type": "info",
+  "is_active": true
+}
