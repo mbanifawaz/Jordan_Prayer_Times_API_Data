@@ -1,15 +1,15 @@
 {
   "announcements": [
     {
-      "id": "duaa_request_2026_01_22",
+      "id": "doaa_request_2026_01_22",
       "title_en": "Prayer Request",
       "title_ar": "طلب دعاء",
-      "message_en": "Please pray for the soul of my maternal uncle, Hatem Abdulrahman Abdulsalam Al-Freihat, who has passed away. May Allah have mercy on him, forgive him, and grant him Jannah. اللهم اغفر له وارحمه",
-      "message_ar": "نرجو منكم الدعاء لخالي حاتم عبدالرحمن عبدالسلام الفريحات الذي انتقل إلى رحمة الله تعالى. اللهم اغفر له وارحمه وعافه واعف عنه وأكرم نزله ووسع مدخله واغسله بالماء والثلج والبرد ونقه من الخطايا كما ينقى الثوب الأبيض من الدنس وأبدله داراً خيراً من داره وأهلاً خيراً من أهله وأدخله الجنة وأعذه من عذاب القبر ومن عذاب النار",
+      "message_en": "Please pray for the soul of my maternal uncle, Hatem Abdulrahman Abdulsalam Al-Freihat, who has passed away recently. May Allah have mercy on him, forgive him, and grant him Jannah. May Allah also have mercy on your loved ones and all deceased Muslims.",
+      "message_ar": "نرجو منكم الدعاء لخالي حاتم عبدالرحمن عبدالسلام الفريحات الذي انتقل إلى رحمة الله تعالى حديثاً. اللهم اغفر له وارحمه وعافه واعف عنه وأكرم نزله ووسع مدخله واغسله بالماء والثلج والبرد ونقه من الخطايا كما ينقى الثوب الأبيض من الدنس وأبدله داراً خيراً من داره وأهلاً خيراً من أهله وأدخله الجنة وأعذه من عذاب القبر ومن عذاب النار. اللهم ارحم أمواتكم وأموات المسلمين أجمعين",
       "type": "info",
       "is_active": true,
       "expires": 1,
-      "expiry_date": "2026-01-23",
+      "expiry_date": "2026-01-31",
       "action_text_en": "Ameen",
       "action_text_ar": "آمين",
       "action_type": "dismiss"
