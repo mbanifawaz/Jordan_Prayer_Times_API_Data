@@ -26,6 +26,20 @@
       "action_text_en": "Clear Cache",
       "action_text_ar": "مسح الذاكرة المؤقتة",
       "action_type": "clear_cache"
-    }
+    },
+{
+  "id": "eid_al_fitr_2026_greeting",
+  "title_en": "Eid Al-Fitr Mubarak",
+  "title_ar": "عيد فطر سعيد",
+  "message_en": "Eid Mubarak! 🌙✨ May Allah accept your fasting and good deeds, and fill your days with happiness, peace, and blessings. Wishing you and your loved ones a joyful Eid Al-Fitr.",
+  "message_ar": "عيد فطر سعيد 🌙✨ تقبل الله طاعتكم، وجعل أيامكم فرحاً وسعادة، وأعاد الله هذا العيد عليكم وعلى أحبابكم بالخير واليمن والبركات.",
+  "type": "info",
+  "is_active": true,
+  "expires": 1,
+  "expiry_date": "2026-04-25",
+  "action_text_en": "Eid Mubarak",
+  "action_text_ar": "كل عام وأنتم بخير",
+  "action_type": "dismiss"
+}
   ]
 }
