@@ -5,11 +5,26 @@
       "title_en": "Version 2.6.0 is on the way",
       "title_ar": "الإصدار 2.6.0 قادم قريباً",
       "message_en": "A big update is with Google Play for review and should reach you in 3 to 7 days.\n\nIt brings prayer alarms that fire on time even when the app is closed, a new Adhkar section, wudu and adhkar reminders, and home screen widgets.\n\nNo action needed — it will arrive through Google Play as usual.",
-      "message_ar": "تحديث كبير قيد المراجعة من Google Play، ومن المتوقع أن يصلك خلال 3 إلى 7 أيام.\n\nيضيف تنبيهات صلاة تعمل في وقتها حتى لو كان التطبيق مغلقاً، وقسم الأذكار، وتنبيهات الوضوء والأذكار، وودجت للشاشة الرئيسية.\n\nلا حاجة لأي إجراء — سيصل التحديث عبر Google Play كالمعتاد.",
+      "message_ar": "تحديث كبير قيد المراجعة من متجر قوقل بلاي، ومن المتوقع أن يصلك خلال 3 إلى 7 أيام.\n\nيضيف تنبيهات صلاة تعمل في وقتها حتى لو كان التطبيق مغلقاً، وقسم الأذكار، وتنبيهات الوضوء والأذكار، وودجت للشاشة الرئيسية.\n\nلا حاجة لأي إجراء — سيصل التحديث عبر متجر قوقل بلاي كالمعتاد.",
+      "type": "info",
+      "is_active": false,
+      "expires": 1,
+      "expiry_date": "2026-09-22"
+    },
+    {
+      "id": "v2_6_0_whats_new",
+      "title_en": "What's new in 2.6.0",
+      "title_ar": "الجديد في الإصدار 2.6.0",
+      "message_en": "Make sure you are on version 2.6.0 — if the app has not updated yet, open Google Play and update it to get everything below.\n\nPrayer alarms now fire on time even when the app is closed. They use Android's alarm clock API, show the alarm icon in your status bar, and take over the lock screen like a real alarm. If your phone ever drops an alarm, the app re-arms it and tells you.\n\nAlso new:\n\n• Adhkar section — 287 adhkar with references, plus a tasbih counter\n• Adhkar reminders for morning, evening and before sleep\n• Wudu reminder before each prayer\n• Two home screen widgets: next prayer, and today's five times\n• Turn alarms on or off for each prayer separately\n• Use any ringtone on your device as the alarm sound\n• 12/24-hour clock and Hijri date adjustment\n• Layout that fits phones and tablets\n\nIf an alarm is ever late, open Settings › Troubleshooting to check your permissions — battery optimisation and autostart are the usual causes.\n\nUse the button below to update or check your version.",
+      "message_ar": "تأكد من أنك على الإصدار 2.6.0 — إذا لم يتحدّث التطبيق بعد، افتح متجر قوقل بلاي وحدّثه للحصول على كل ما يلي.\n\nتنبيهات الصلاة تعمل الآن في وقتها حتى لو كان التطبيق مغلقاً. تستخدم واجهة المنبه في أندرويد، وتُظهر أيقونة المنبه في شريط الحالة، وتظهر على شاشة القفل كالمنبه الحقيقي. وإذا أوقف هاتفك أحد التنبيهات، يعيد التطبيق ضبطه وينبهك بذلك.\n\nوأيضاً:\n\n• قسم الأذكار — 287 ذكراً مع مراجعها، وعدّاد تسبيح\n• تنبيهات أذكار الصباح والمساء والنوم\n• تنبيه الوضوء قبل كل صلاة\n• ودجتان للشاشة الرئيسية: الصلاة القادمة، وأوقات اليوم الخمسة\n• تفعيل أو تعطيل التنبيه لكل صلاة على حدة\n• استخدام أي نغمة على جهازك كصوت للتنبيه\n• نظام 12/24 ساعة وتعديل التاريخ الهجري\n• تصميم يناسب الهواتف والأجهزة اللوحية\n\nإذا تأخر أي تنبيه، افتح الإعدادات › حل المشاكل للتحقق من الصلاحيات — تحسين البطارية والتشغيل التلقائي هما السبب الأكثر شيوعاً.\n\nاستخدم الزر أدناه للتحديث أو للتحقق من إصدارك.",
       "type": "info",
       "is_active": true,
       "expires": 1,
-      "expiry_date": "2026-09-22"
+      "expiry_date": "2026-10-31",
+      "action_text_en": "Open Google Play",
+      "action_text_ar": "افتح متجر قوقل بلاي",
+      "action_type": "link",
+      "action_link": "https://play.google.com/store/apps/details?id=com.mbf.jordan_prayer_times_app"
     }
   ]
 }
