@@ -1,6 +1,19 @@
 {
   "announcements": [
     {
+      "id": "v3_0_0_coming_soon",
+      "title_en": "Version 3.0.0 is coming soon",
+      "title_ar": "الإصدار 3.0.0 قادم قريباً",
+      "message_en": "Version 3.0.0 is with Google Play for review and should reach you in the next few days.\n\nFirst, thank you. Nearly everything in this update came from people who wrote in after 2.6.0 — and most of it came from one person, Omar Hamdan, whose detailed feedback shaped the bulk of 3.0.0. Thank you, Omar.\n\nWhat is coming:\n\n• Alarms that look after themselves — the schedule repairs itself, gets checked before every prayer, and arms tomorrow's Fajr after Isha, so it keeps working for weeks without opening the app\n• Any sound on your device can be your athan\n• Sunrise as a time of its own, with an optional alarm\n• Jumu'ah reminder, and suhoor and iftar during Ramadan\n• Redesigned main screen and full screen alarm\n• Widget theme, transparency, language and text colours\n• Settings regrouped into sections, with a help guide\n• Reorder adhkar, chapters and favourites\n• Prayer calendar opens on today, with a date picker\n• Snooze, one vibration switch, recent alarms, and a reliability self test\n• Separate volume for prayers, wudu reminders and adhkar\n\nNo action needed — it will arrive through Google Play as usual.\n\nKeep the suggestions coming.",
+      "message_ar": "الإصدار 3.0.0 قيد المراجعة من متجر قوقل بلاي، ومن المتوقع أن يصلك خلال أيام.\n\nأولاً، شكراً لكم. أغلب ما في هذا التحديث جاء من أشخاص كتبوا لنا بعد الإصدار 2.6.0 — ومعظمه من شخص واحد، عمر حمدان، الذي شكّلت ملاحظاته المفصّلة الجزء الأكبر من 3.0.0. شكراً لك عمر.\n\nما هو قادم:\n\n• منبّهات تعتني بنفسها — الجدولة تصلح نفسها، وتُفحص قبل كل صلاة، ويُضبط فجر الغد بعد العشاء، فتستمر بالعمل لأسابيع دون فتح التطبيق\n• أي ملف صوتي على جهازك يمكن أن يكون الأذان\n• الشروق كوقت مستقل، مع منبّه اختياري\n• تذكير بصلاة الجمعة، وبالسحور والإفطار في رمضان\n• تصميم جديد للشاشة الرئيسية ولشاشة المنبّه\n• سمة الودجة وشفافيتها ولغتها وألوان نصها\n• الإعدادات مرتّبة في أقسام، مع دليل مساعدة\n• رتّب الأذكار والأبواب والمفضلة كما تحب\n• تقويم الصلاة يفتح على اليوم، مع منتقي تاريخ\n• غفوة، ومفتاح واحد للاهتزاز، وسجل للمنبّهات، وفحص ذاتي للموثوقية\n• مستوى صوت مستقل للصلوات ولتذكير الوضوء وللأذكار\n\nلا حاجة لأي إجراء — سيصل التحديث عبر متجر قوقل بلاي كالمعتاد.\n\nواستمروا بإرسال اقتراحاتكم.",
+      "type": "info",
+      "is_active": true,
+      "expires": 1,
+      "expiry_date": "2026-09-30",
+      "max_version": "2.9.9",
+      "priority": 20
+    },
+    {
       "id": "v2_6_0_coming_soon",
       "title_en": "Version 2.6.0 is on the way",
       "title_ar": "الإصدار 2.6.0 قادم قريباً",
@@ -9,7 +22,8 @@
       "type": "info",
       "is_active": false,
       "expires": 1,
-      "expiry_date": "2026-09-22"
+      "expiry_date": "2026-09-22",
+      "max_version": "2.9.9"
     },
     {
       "id": "v2_6_0_whats_new",
@@ -24,7 +38,8 @@
       "action_text_en": "Open Google Play",
       "action_text_ar": "افتح متجر قوقل بلاي",
       "action_type": "link",
-      "action_link": "https://play.google.com/store/apps/details?id=com.mbf.jordan_prayer_times_app"
+      "action_link": "https://play.google.com/store/apps/details?id=com.mbf.jordan_prayer_times_app",
+      "max_version": "2.9.9"
     }
   ]
 }
