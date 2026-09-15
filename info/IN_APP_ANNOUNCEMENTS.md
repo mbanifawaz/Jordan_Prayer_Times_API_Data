@@ -5,10 +5,19 @@ This guide explains how to use the in-app announcement system to notify users ab
 ## Overview
 
 The announcement system supports:
-- **Multiple announcements** - Users see announcements one at a time (first unseen)
+- **Multiple announcements** - Users see one at a time, highest priority first
+- **Version targeting** - Only reach the app versions an announcement applies to
+- **Start dates** - Publish ahead of time and let it switch itself on
 - **Expiry dates** - Announcements can auto-expire after a set date
+- **Priority** - Decide which announcement is shown first
+- **Offline cache** - The last payload is reused when the fetch fails
 - **Localization** - English and Arabic support
 - **Action buttons** - Clear cache, open links, or dismiss
+
+> Version targeting, start dates, priority and the offline cache were added in
+> app version 3.0.0. Older installs ignore those fields, so an announcement
+> using them still shows on 2.x — set `min_version` only when the message would
+> be wrong for an older version rather than merely irrelevant.
 
 ## Step 1: Create the Announcement File
 
@@ -43,7 +52,21 @@ Create a file at `config/announcement.json` in your `Jordan_Prayer_Times_API_Dat
       "type": "info",
       "is_active": true,
       "expires": 1,
-      "expiry_date": "2026-04-01"
+      "expiry_date": "2026-04-01",
+      "start_date": "2026-03-18",
+      "priority": 10
+    },
+    {
+      "id": "whats_new_3_0",
+      "title_en": "What's new in 3.0",
+      "title_ar": "ما الجديد في 3.0",
+      "message_en": "Custom alarm sounds, widget colours, and reminders that open the right adhkar.",
+      "message_ar": "أصوات تنبيه مخصصة، وألوان للأدوات، وتذكيرات تفتح الأذكار المقصودة.",
+      "type": "info",
+      "is_active": true,
+      "expires": 1,
+      "expiry_date": "2026-11-01",
+      "min_version": "3.0.0"
     }
   ]
 }
@@ -62,10 +85,52 @@ Create a file at `config/announcement.json` in your `Jordan_Prayer_Times_API_Dat
 | `is_active` | Yes | `true` to show, `false` to hide |
 | `expires` | No | `0` = never expires (default), `1` = has expiry date |
 | `expiry_date` | No | Date after which announcement is hidden. Format: `"yyyy-MM-dd"` (e.g., `"2026-02-01"`). Only used if `expires` is `1` |
+| `start_date` | No | Date before which the announcement stays hidden. Format: `"yyyy-MM-dd"`. Lets you publish ahead of a release |
+| `min_version` | No | Lowest app version that should see it, e.g. `"3.0.0"`. Compared number by number, so `2.10.0` is correctly newer than `2.9.0` |
+| `max_version` | No | Highest app version that should see it. Useful for "please update" notices aimed only at old installs |
+| `priority` | No | Higher shows first when several apply. Defaults to `0` |
 | `action_text_en` | No | English button text (optional) |
 | `action_text_ar` | No | Arabic button text (optional) |
 | `action_type` | No | `"clear_cache"`, `"link"`, `"dismiss"` |
 | `action_link` | No | URL if `action_type` is `"link"` |
+
+## Version Targeting
+
+`min_version` and `max_version` keep a message away from the versions it does
+not describe. Both are inclusive, and either can be used on its own.
+
+| Fields | Who sees it |
+|--------|-------------|
+| Neither | Every version |
+| `min_version: "3.0.0"` | 3.0.0 and newer |
+| `max_version: "2.9.9"` | Everything up to and including 2.9.9 |
+| Both | Only versions inside the window |
+
+Two things worth knowing:
+
+- Versions are compared **numerically per segment**, so `2.10.0` is newer than
+  `2.9.0`. Plain text comparison gets that backwards.
+- Segment counts need not match: `min_version: "3.0"` accepts `3.0.0`.
+
+**Typical use — "please update":** `max_version` set to the last broken build,
+so the people already on the fix are never nagged.
+
+## Scheduling with `start_date`
+
+An announcement with a future `start_date` is fetched but not shown until that
+date arrives. Publish the release note the day before the rollout and leave it
+alone, rather than editing the file at the moment of release.
+
+`start_date` and `expiry_date` combine into a window: shown from the start date,
+hidden again after the expiry date (when `expires` is `1`).
+
+## Priority
+
+When more than one announcement applies, the highest `priority` shows first,
+then the rest on subsequent launches as each is dismissed. Without it, ordering
+falls back to the order of the array, which makes the file's layout matter more
+than it should. A Ramadan greeting at `priority: 10` will come before a routine
+notice at the default `0`.
 
 ## Expiry System
 
@@ -146,17 +211,21 @@ The expiry system helps manage announcement visibility over time:
 ## How It Works
 
 1. App launches → waits 2 seconds → fetches `config/announcement.json`
-2. Filters announcements: `is_active` must be `true` AND not expired
-3. Checks user's dismissed list → finds first unseen announcement
-4. Shows dialog → user can dismiss or tap action button
-5. Dismissed IDs are stored locally (user won't see same ID again)
+2. The payload is cached on the device. If the fetch fails — no connection, a
+   rate limit — the last cached payload is used instead, so an announcement
+   already downloaded still reaches the user offline
+3. Filters announcements: `is_active` must be `true`, not expired, already
+   started, and applicable to the installed app version
+4. Drops any the user has dismissed, then sorts what remains by `priority`
+5. Shows the top one → user can dismiss or tap the action button
+6. Dismissed IDs are stored locally (the same ID is never shown again)
 
 ## Multiple Announcements Behavior
 
 When you have multiple announcements:
-- Users see **one announcement at a time** (the first unseen one)
-- After dismissing, the next unseen announcement shows on next app launch
-- Expired announcements are automatically skipped
+- Users see **one at a time** — the applicable one with the highest `priority`
+- After dismissing, the next one shows on the next app launch
+- Expired, not-yet-started and out-of-version announcements are skipped
 
 ## To Disable an Announcement
 
@@ -164,6 +233,22 @@ Three options:
 1. Set `"is_active": false` - Hides immediately
 2. Set `"expires": 1` with a past `expiry_date` - Auto-hidden
 3. Remove from the array - Gone permanently
+
+Note that a device holding a cached payload keeps using it until it can fetch
+again, so switching an announcement off reaches an offline user only once they
+are back online.
+
+## Release Checklist
+
+Publishing a "what's new" alongside an app release:
+
+1. Add the entry with `min_version` set to the version being released, so
+   nobody on an older build is told about features they do not have.
+2. Set `start_date` to the rollout date and `expiry_date` a month or two later —
+   a "what's new" is stale long before it is wrong.
+3. Give it a `priority` above any standing notice if it should come first.
+4. Push it with `is_active: true` ahead of the rollout; the start date holds it
+   back until the update is actually out there.
 
 ## To Re-show to All Users
 
