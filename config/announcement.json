@@ -1,6 +1,20 @@
 {
   "announcements": [
     {
+      "id": "android_tv_launch",
+      "title_en": "Jordan Prayer Times is now on Android TV",
+      "title_ar": "مواقيت الصلاة الأردن الآن على Android TV",
+      "message_en": "The official prayer times for your city, now on the big screen.\n\n• Today's prayer times with a countdown to the next prayer\n• A screensaver with photos of Jordan's mosques and landmarks, showing the time, the Hijri date and the next prayer\n• Prayer calendar for every downloaded day\n• Arabic and English, with Hijri date adjustment\n• Works offline after the first setup\n\nTo install it, search for Jordan Prayer Times in Google Play on your TV. To use it as the screensaver, choose it under the TV's Settings › Device Preferences › Screen saver.\n\nThank you to Ehab Amawi, who built the TV app with us.",
+      "message_ar": "مواقيت الصلاة الرسمية لمدينتك، الآن على الشاشة الكبيرة.\n\n• مواقيت اليوم مع عدّ تنازلي للصلاة القادمة\n• شاشة توقف بصور مساجد الأردن ومعالمه، مع الساعة والتاريخ الهجري والصلاة القادمة\n• تقويم الصلاة لكل الأيام المحمّلة\n• العربية والإنجليزية، مع تعديل التاريخ الهجري\n• يعمل دون إنترنت بعد الإعداد الأول\n\nلتثبيته، ابحث عن مواقيت الصلاة الأردن في متجر قوقل بلاي على تلفازك. ولاستخدامه كشاشة توقف، اختره من إعدادات التلفاز › تفضيلات الجهاز › شاشة التوقف.\n\nشكراً لإيهاب عماوي الذي طوّر تطبيق التلفاز معنا.",
+      "type": "info",
+      "is_active": true,
+      "expires": 1,
+      "start_date": "2026-09-30",
+      "expiry_date": "2026-12-31",
+      "min_version": "3.0.0",
+      "priority": 30
+    },
+    {
       "id": "v3_0_0_whats_new",
       "title_en": "What's new in 3.0.0",
       "title_ar": "الجديد في الإصدار 3.0.0",
