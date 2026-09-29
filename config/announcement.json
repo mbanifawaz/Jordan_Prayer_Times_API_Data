@@ -1,6 +1,22 @@
 {
   "announcements": [
     {
+      "id": "apology_2026_09",
+      "title_en": "We're sorry — everything is working again",
+      "title_ar": "نعتذر منكم — كل شيء يعمل من جديد",
+      "message_en": "Last week the app lost its connection to the prayer times, and anyone who had not opened it recently could not see today's times at all. We know how much you rely on it, and we are truly sorry for the trouble it caused.\n\nWhat was fixed:\n\n• The cause is gone for good: the app no longer depends on the key that failed, so the same problem cannot happen again, inshallah\n• Prayer times are published through the end of this year, and each new month is added automatically\n• Prayer alarms and notifications, Fajr included, are fixed\n• Jordan Prayer Times is now also on Wear OS watches and Android TV\n\nThis is a stable release, built to keep working on its own. From now on, updates should only bring new features.\n\nIf you have not updated yet, please update from Google Play using the button below.\n\nThank you for your patience, and for staying with us.",
+      "message_ar": "انقطع اتصال التطبيق بأوقات الصلاة الأسبوع الماضي، ولم يتمكن من لم يفتحه مؤخراً من رؤية أوقات اليوم إطلاقاً. نعلم كم تعتمدون عليه، ونعتذر منكم بصدق عن كل ما سبّبه ذلك من إزعاج.\n\nما تم إصلاحه:\n\n• زال السبب نهائياً: لم يعد التطبيق يعتمد على المفتاح الذي تعطّل، فلن تتكرر المشكلة نفسها بإذن الله\n• أوقات الصلاة منشورة حتى نهاية هذا العام، ويُضاف كل شهر جديد تلقائياً\n• تم إصلاح منبّهات الصلاة وإشعاراتها، بما فيها الفجر\n• مواقيت الصلاة الأردن متوفر الآن أيضاً على ساعات Wear OS وأجهزة Android TV\n\nهذا إصدار مستقر صُمّم ليعمل من تلقاء نفسه، ومن الآن فصاعداً يُفترض أن تقتصر التحديثات على الميزات الجديدة.\n\nإذا لم تحدّث التطبيق بعد، يرجى تحديثه من متجر قوقل بلاي عبر الزر أدناه.\n\nشكراً لصبركم ولبقائكم معنا.",
+      "type": "info",
+      "is_active": true,
+      "expires": 1,
+      "expiry_date": "2026-12-31",
+      "priority": 40,
+      "action_text_en": "Open Google Play",
+      "action_text_ar": "افتح متجر قوقل بلاي",
+      "action_type": "link",
+      "action_link": "https://play.google.com/store/apps/details?id=com.mbf.jordan_prayer_times_app"
+    },
+    {
       "id": "android_tv_launch",
       "title_en": "Jordan Prayer Times is now on Android TV",
       "title_ar": "مواقيت الصلاة الأردن الآن على Android TV",
